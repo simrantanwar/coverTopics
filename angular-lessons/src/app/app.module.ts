@@ -4,6 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SharedControlsModule } from 'src/shared controls/shared-controls.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -12,7 +13,10 @@ import { SharedControlsModule } from 'src/shared controls/shared-controls.module
   imports: [
     BrowserModule,
     AppRoutingModule,
-    SharedControlsModule   
+    SharedControlsModule,
+    BrowserAnimationsModule
+    
+     
   ],
   providers: [],
   bootstrap: [AppComponent]

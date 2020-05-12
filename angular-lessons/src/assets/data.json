@@ -1,0 +1,36 @@
+{
+    "success": true,
+    "statusCode": 200,
+    "message": "Dashboard data fetched successfully.",
+    "result": [{
+            "id": 1,
+            "country": "UK",
+            "amount": "100"
+        },
+        {
+            "id": 1,
+            "country": "Australia",
+            "amount": "30"
+        },
+        {
+            "id": 1,
+            "country": "India",
+            "amount": "150"
+        },
+        {
+            "id": 1,
+            "country": "USA",
+            "amount": "400"
+        },
+        {
+            "id": 1,
+            "country": "China",
+            "amount": "175"
+        },
+        {
+            "id": 1,
+            "country": "UAE",
+            "amount": "400"
+        }
+    ]
+}

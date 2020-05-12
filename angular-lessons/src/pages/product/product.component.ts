@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ToasterService } from 'src/services/toaster.service';
+import { LoaderService } from 'src/services/loader.service';
+import { ButtonSetting } from 'src/shared controls/button-control/button-setting.model';
 
 
 export interface PeriodicElement {
@@ -28,9 +30,12 @@ const ELEMENT_DATA: PeriodicElement[] = [
   styleUrls: ['./product.component.css']
 })
 export class ProductComponent implements OnInit {
-  constructor(private _toasterService: ToasterService) { }
+  constructor(private _toasterService: ToasterService, private _loaderService:LoaderService) { }
+  addButtonCustomVal:ButtonSetting;
 
   ngOnInit(): void {
+    this.addButtonCustomVal = new ButtonSetting({id: 'addBtn', caption: 'Add Product', disabled: false, hidden: false, imgUrl: ''})
+    this._loaderService.showLoader(true);
   }
   displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
   dataSource = ELEMENT_DATA;
@@ -38,11 +43,12 @@ export class ProductComponent implements OnInit {
   addUser() {
     let response = {
       msg: 'User Added Successfully',
-      color: 'pink',
+      color: 'success',
       timeout:2000
     }
     
     this._toasterService.showToaster(response);
+    this._loaderService.showLoader(false);
   }
 
 

@@ -5,3 +5,11 @@
     right: 0px;
     padding: 18px;
 }
+
+.msg-success {
+    background-color: lightgreen;
+}
+
+.msg-danger {
+    background-color: crimson;
+}

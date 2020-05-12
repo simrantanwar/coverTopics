@@ -1,3 +1,12 @@
+<!-- <div *ngIf="isLoader" class="card shadow-card">
+    <div class="card-body">
+        <span class="mr-3">Please Wait...</span>
+        <div class="spinner-border text-secondary" role="status">
+
+        </div>
+    </div>
+</div>
+ -->
 <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
 
     <!--- Note that these columns can be defined in any order.
@@ -32,3 +41,28 @@
 </table>
 
 <button class="btn btn-danger" (click)="deleteUser()">Delete User</button>
+<!-- <button class="btn btn-primary" (click)="getUsers()">Get User Datas</button> -->
+
+<app-button-control [addButtonCustomSettings]="addButtonCustomVal" [deleteButtonCustomSettings]="deleteButtonCustomVal" (addButtonEvent)="addUser($event)" (printButtonEvent)="printed()"> </app-button-control>
+
+
+<!-- ---------------Without Async Pipe--------------------- -->
+
+<div *ngIf="userDetail">
+    {{userDetail.name}}
+</div>
+
+
+
+<!-- ---------------With Async Pipe--------------------- -->
+
+<div *ngIf="userDetail$ | async as _userDetail">
+    {{_userDetail.name}}
+</div>
+
+<!-- ---------------Mat Datepicker--------------------- -->
+<input matInput [matDatepicker]="picker" [(ngModel)]="dob">
+<mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+<mat-datepicker #picker></mat-datepicker>
+<br>
+<button (click)="saveForm()">Save</button> {{dob}}

@@ -1,0 +1,10 @@
+<div>
+    <button class="btn btn-success mr-2" [id]="addButtonDefaultSettings.id" [hidden]="addButtonDefaultSettings.hidden" [disabled]="addButtonDefaultSettings.disabled" (click)="onAddClick($event)">
+        {{addButtonDefaultSettings.caption}}
+        <i [class]="addButtonDefaultSettings.imgUrl" aria-hidden="true"></i>
+    </button>
+    <button class="btn btn-default edit-btn mr-2" [id]="editButtonDefaultSettings.id" [hidden]="editButtonDefaultSettings.hidden" [disabled]="editButtonDefaultSettings.disabled" (click)="onEditClick()"> {{editButtonDefaultSettings.caption}}</button>
+    <button class="btn btn-primary mr-2" [id]="printButtonDefaultSettings.id" [hidden]="printButtonDefaultSettings.hidden" [disabled]="printButtonDefaultSettings.disabled" (click)="onPrintClick()"> {{printButtonDefaultSettings.caption}}</button>
+    <button class="btn btn-danger mr-2" [id]="deleteButtonDefaultSettings.id" [hidden]="deleteButtonDefaultSettings.hidden" [disabled]="deleteButtonDefaultSettings.disabled" (click)="onDeleteClick()"> {{deleteButtonDefaultSettings.caption}}</button>
+    <button class="btn btn-default close-btn mr-2" [id]="closeButtonDefaultSettings.id" [hidden]="closeButtonDefaultSettings.hidden" [disabled]="closeButtonDefaultSettings.disabled" (click)="onCloseClick()"> {{closeButtonDefaultSettings.caption}}</button>
+</div>

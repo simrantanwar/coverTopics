@@ -1,0 +1,25 @@
+button {
+    padding: 10px 20px;
+}
+
+.edit-btn {
+    background-color: darkcyan;
+    color: white;
+    border: 0;
+}
+
+.edit-btn:hover {
+    background-color: rgb(1, 88, 88);
+    transition: 0.5s ease-in-out;
+}
+
+.close-btn {
+    background-color: darkgray;
+    color: black;
+    border: 0;
+}
+
+.close-btn:hover {
+    background-color: lightslategrey;
+    transition: 0.5s ease-in-out;
+}
